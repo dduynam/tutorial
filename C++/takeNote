@@ -1,0 +1,1 @@
+random     srand(time(NULL)); rand() % 10 + 1;
