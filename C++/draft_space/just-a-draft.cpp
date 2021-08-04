@@ -79,8 +79,9 @@ void loop()
 }
 
 /* Common for loop with iterator */
-void loop1(){
-    std::vector<int> _arr{5,4,3,2,1};
+void loop1()
+{
+    std::vector<int> _arr{5, 4, 3, 2, 1};
     for (auto it = _arr.begin(); it != _arr.end(); it++)
     {
         std::cout << *it << " ";
@@ -89,21 +90,127 @@ void loop1(){
 }
 
 /* For each */
-void loop2(){
-    int arr[5] = {1,2,3,4,5}; //array
-    auto printx2 = []();
+void loop2()
+{
+    int arr[5] = {1, 2, 3, 4, 5}; //array
+    auto printx2 = [](int i)
+    {
+        std::cout << i * 2 << " ";
+    };
 
+    std::for_each(arr, arr + 5, printx2);
+    std::cout << std::endl;
+
+    //pass the object of function
+    std::vector<int> _arr{1, 3, 5, 8, 9};
+    std::for_each(_arr.begin(), _arr.end(), printx2);
+    std::cout << std::endl;
+    std::cout << "Datatype of print2x is: " << typeid(printx2).name() << std::endl;
+
+    //lambda
+    std::for_each(_arr.begin(), _arr.end(), [](int i)
+                  { std::cout << pow(i, 2) << " "; });
+    std::cout << std::endl;
+
+    //exception and for_each
+    try
+    {
+        std::for_each(_arr.begin(), _arr.end(), [](int i)
+                      {
+                          std::cout << i << " ";
+                          if (i % 2 == 0)
+                              throw i;
+                      });
+    }
+    catch (int i)
+    {
+        std::cout << "\nThe exception element is: " << i << std::endl;
+    }
 }
 #endif
 
 #ifndef LambdaExpression
 #define LambdaExpression
-void printVector(std::vector<int> v)
+void printVector(std::vector<int> &v)
 {
-
     for_each(v.begin(), v.end(), [](int i) -> void
              { std::cout << i << " "; });
     std::cout << std::endl;
+}
+void lambda()
+{
+    std::vector<int> v{4, 3, 5, 6, 7, 7, 3, 1};
+    std::cout << "The recently initialized vector: ";
+    printVector(v);
+
+    // find_if --> find the 1st element of the sequence when the condition is true.
+    std::vector<int>::iterator it = find_if(v.begin(), v.end(), [](int i)
+                                            { return i > 4; });
+    std::cout << "\nFirst number greater than 4 is: " << *it << std::endl;
+
+    // sort and lambda. _comp(*(it+1), *it) --> true will swap the value
+    std::sort(v.begin(), v.end(), [](int a, int b) -> bool
+              { return a > b; });
+    std::cout << "\nAfter sorting: ";
+    printVector(v);
+
+    // count_if
+    int count = count_if(v.begin(), v.end(), [](int i)
+                         { return i >= 4; });
+    std::cout << "\nThe numbers of value greater than 3 are: " << count << std::endl;
+
+    //unique: Remove consecutive values from a sequence using a predicate
+    it = unique(v.begin(), v.end(), [](int a, int b) -> bool
+                { return a == b; });
+    std::cout << "\n--- Filter the value and bring the duplicate value to backward: ";
+    printVector(v); // ---> it just move the same value to the backwards.
+
+    // Elements between the end of the resulting sequence and __last are still present, but their value is unspecified
+    // Resizing vector to make size equal to total different number
+    std::cout << "\n--- After resizing: ";
+    v.resize(distance(v.begin(), it));
+    printVector(v);
+
+    // accumulate: function to store the value (return a final sum) init value with 1
+    int value = accumulate(v.begin(), v.end(), 1, [](int a, int b) -> int
+                           { return a * b; });
+    // We can utilitize it to calculate (compute) the factorial of any number
+    std::cout << "\nThe result for multiply of those element on the container is: " << value << std::endl;
+
+    // Access function stored into the variable
+    auto square = [](int i)
+    {
+        return i * i;
+    };
+    std::cout << "\nThe square of 10 is: " << square(10) << std::endl;
+
+    // Specific feature: Access to external variable from enclosing scope
+    std::cout << "\nThis is an example for accessing to external variable" << std::endl;
+    std::vector<int> arrOne{2, 3, 4};
+    std::vector<int> arrTwo{5, 6, 7};
+    std::cout << "---------Access by reference-----------" << std::endl;
+    auto push = [&](int i)
+    {
+        arrOne.push_back(i);
+        arrTwo.push_back(i);
+    };
+    push(20);
+    std::cout << "arrOne: ";
+    printVector(arrOne);
+    std::cout << "arrTwo: ";
+    printVector(arrTwo);
+
+    std::cout << "\n---------Access by copy-----------" << std::endl;
+    auto printValue = [arrOne]()
+    {
+        std::cout << "arrOne: ";
+        for (auto p = arrOne.begin(); p != arrOne.end(); p++)
+            std::cout << *p << " ";
+    };
+    printValue();
+
+    // Example: Find the 1st number greater than N
+    int N = 5;
 }
 #endif
 
@@ -262,17 +369,32 @@ int main()
     //Or we can make it faster by
     example.emplace_back("haha", 10);
     example.at(0);
-
 #endif
 
 #ifdef LambdaExpression
-
+    lambda();
 #endif
 
-#ifdef Loop
-    loop1();
+#ifdef Loop1
+    loop2();
 #endif
+
     test();
+
+    int number = 10; 
+
+    class example
+    {
+    public:
+        int begin, end;
+        bool function;
+        example(int _begin, int _end, bool _function) : begin(_begin), end(_end), function(_function);
+    }; // Can be changed by a constructor of class.
+    std::unique_ptr<example> uniquePtrExample;
+    uniquePtrExample = std::make_unique<example>(1,3,[&](){
+        if (number > 5) return true;
+        return false; 
+    });
 
     return 0;
 }
