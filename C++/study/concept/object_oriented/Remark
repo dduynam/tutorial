@@ -1,0 +1,3 @@
+-   Abstract Class -- can not be an instance of any object (not a concrete class) --> can not initialize an object
+    Example: We have class Animal, the object of Animal is not meaningful... So it should be an abstract class
+

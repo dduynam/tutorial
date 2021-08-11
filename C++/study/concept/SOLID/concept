@@ -1,0 +1,26 @@
+Just be so lit :))
+
+1.  [S]ingle Responsibility Principle
+    - Split into many small class depending on "FUNCTIONALITY"
+    - One class just perform one specific task
+    - Make code more readable, maintainable easily 
+    - Make functionality independantly   
+
+2.  [O]pen/Close Principle
+    - Open for Extension, Close for Modification
+    - Shouldn't modify directly an available class instead we inherit it and deploy additional feature.
+    Example: We change the datatype of a parameter of the function in base class --> all classes inherited it will be affected directly.
+    ---> Conclusion: Should make an new class and inherit the orginal one.
+
+3.  [L]iskov Substitution Principle
+    - Child class can replace parent class that it doesn't change the correctness of program.
+    Example: Fish(Catfish, Carp,... eatable) > < Fish toy made by plastic(cannot eat) 
+
+4.  [I]nterface Segregation Principle
+    - Split interface into many small interfaces.
+    - Easy to manage, implement ...
+    Example: Dog can inherit interfaces related to Eat, Swim, ... instead we gather all characteristics of Animal in one interface (Fish : Animal while Fish cannot fly) 
+
+5.  [D]ependency Inversion Principle
+    - High level module shouldn't be independant to Low level module (concrete class), should depend on interface of low level module instead.
+    Ex: Module A, B (Interface C) Currently, we are connecting to module A, but in the future there is a chance to replace from A to B --> affected
