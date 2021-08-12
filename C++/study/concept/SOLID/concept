@@ -14,7 +14,7 @@ Just be so lit :))
 
 3.  [L]iskov Substitution Principle
     - Child class can replace parent class that it doesn't change the correctness of program.
-    Example: Fish(Catfish, Carp,... eatable) > < Fish toy made by plastic(cannot eat) 
+    Example: Fish(Catfish, Carp,... eatable) >< Fish toy made by plastic(cannot eat) 
 
 4.  [I]nterface Segregation Principle
     - Split interface into many small interfaces.

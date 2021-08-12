@@ -1,3 +1,7 @@
 -   Abstract Class -- can not be an instance of any object (not a concrete class) --> can not initialize an object
     Example: We have class Animal, the object of Animal is not meaningful... So it should be an abstract class
 
+-   Encapsulation: How to ensure the encapsulation while inheriting a class
+    + Solution 1: Declare a "protected" property
+    + Solution 2: If the property is declared as "private", we can create the "Nested" class into the base class scope.
+    

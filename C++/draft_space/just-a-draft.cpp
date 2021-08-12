@@ -381,7 +381,7 @@ int main()
 
     test();
 
-    int number = 10; 
+    int number = 10;
 
     class example
     {
@@ -391,10 +391,12 @@ int main()
         example(int _begin, int _end, bool _function) : begin(_begin), end(_end), function(_function);
     }; // Can be changed by a constructor of class.
     std::unique_ptr<example> uniquePtrExample;
-    uniquePtrExample = std::make_unique<example>(1,3,[&](){
-        if (number > 5) return true;
-        return false; 
-    });
+    uniquePtrExample = std::make_unique<example>(1, 3, [&]()
+                                                 {
+                                                     if (number > 5)
+                                                         return true;
+                                                     return false;
+                                                 });
 
     return 0;
 }
