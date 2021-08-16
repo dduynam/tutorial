@@ -1,5 +1,9 @@
 Just be so lit :))
 
+We have an interesting example about PizzaStore. However, to improve our problem solving we should define the design pattern in advance then follow it to code 
+the program. 
+For the reference, https://sourcemaking.com/design_patterns (How to define the proper design pattern) 
+
 1.  [S]ingle Responsibility Principle
     - Split into many small class depending on "FUNCTIONALITY"
     - One class just perform one specific task

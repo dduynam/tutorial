@@ -134,7 +134,7 @@ public:
             break;
         }
 
-        if (!pizza){
+        if (pizza != nullptr){
             pizza->Prepare();
             pizza->Bake();
             pizza->Cut();
