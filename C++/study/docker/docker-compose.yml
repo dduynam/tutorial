@@ -1,0 +1,17 @@
+verison: '3'
+services: 
+  course-service:
+    build: ./course-service
+    volumes: #update server realtime
+      - ./course-service:/usr/src/app
+    ports:
+      - 5001:8080
+  
+  website:
+    image: nginx:alpine
+    volumes:
+      - ./website:/usr/share/nginx/html
+    ports: 
+      - 5002:80
+    depends_on:
+      - course-service

@@ -1,0 +1,55 @@
+Docker Concept
+    Offer deploy or development for application (container) to developer and system admin 
+
+    The difference between docker and virtual machine
+    * Virtual Machine:
+        + Hypervisor: help to connect the underlying layer (Infrastructure,...), run on individual Kernel (Guest OS)
+        + 
+    * Docker: 
+        + Use common OS (Host OS) --> decrease the size of container greatly
+        + Share kernel, Unix file
+        + Light weight platform
+
+    When run the apps on the VM, it will take a long time to open it. While docker can help to open fast significantly
+
+    Keyword: 
+        - image: executable package (library, code, config, variable enviroment,...)
+        - container: runtime instance of image (execute the image)
+        - Dockerfile: environment information contained on text file. (environment, path,...)
+
+    Usage of docker
+        - Ensure the consistency of environment on all utilized machines. 
+        - There is existing image --> easy for newcomers to set up system with installing any dependency additionally.
+        - Faster then VM.
+
+    Basis of use: 
+        1. Create Dockerfile
+        2. Build image from dockerfile
+        3. Execute image to create container.
+
+    Common Commands:
+        docker build -t 'image-tag' 'address of build context containing dockerfile'
+        docker run -p 'host port':'docker port' 'image-tag'
+        docker ps (check the current container list)
+        docker images (check the current image list)
+
+    Note: 
+    -t /tag/
+    docker build -t my-node-app:v0.0.1 .
+    docker run -p 5001:8080 my-node-app:v0.0.1 /bind port 5001 on your PC to 8080 port of Docker/
+    docker ps /show current/
+    docker container stop <container-name> /turn off the container/
+
+Docker Compose (huge system - using micro service)
+Summary:
+    - Docker compose: a tool to define and run multi-container in Docker application
+    - Config server and app in docker-compose.yml file
+    - Run by command line
+
+Example: 
+    1. Course Service run-based nodejs plays as API
+    2. There is a html file to get data from API and display data
+
+Pros: 
+    - Migrate a entire system to another PC easily by calling docker compose up (just need to modify config)
+    - Containers working on the docker compose can connect to each other.

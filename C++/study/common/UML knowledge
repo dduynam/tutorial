@@ -1,0 +1,38 @@
+There are 3 major kinds of Diagram
+1. Structure Diagram
+    + Class Diagram
+    + Object Diagram
+    + Package Diagram
+    + Component Diagram
+    + Composite Struture Diagram
+    + Deployment Diagram
+
+2. Behavior Diagram
+    + Use Case Diagram
+    + Activity Diagram
+    + State Machine Diagram
+
+3. Interaction Diagram
+    + Sequence Diagram
+    + Timing Diagram
+    + Communication Diagram
+    + Interaction Overview Diagram
+
+
+Use_Case: 
+    There are 4 targets in UML:
+        + System
+        + Actor
+        + Use Case
+        + Relationship
+    - System can be a website or application, another component also.
+    - Actor includes 2 kinds: Primary actor và Secondary actor
+        + Primary actor initialize and run Use Case. (placed the left side of UML system) 
+        + Secondary actor will be response. (placed the left side of UML system)
+    - Use Case is a feature, or function of system.
+    - Kinds of connection:
+        + Association: Mối liên kết cơ bản của Actor và Use Case
+        + Include: Base Use Case xảy ra thì Included Use Case chắc chắn phải xảy ra.
+        + Extend: Base Use Case xảy ra thì có thể hoặc không Extended Use Case xảy ra.
+        + Generalization: Giống như kế thừa trong OOP
+        - Extension points là 1 dạng viết rõ ràng hơn của extend relationship.

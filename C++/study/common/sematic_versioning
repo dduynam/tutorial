@@ -1,0 +1,8 @@
+Version: "4.9.7" // <Major>.<Minor>.<Patch>
+[Major] Deliver new feature with affecting or changing directly to the current API or functionality
+[Minor] Deliver new feature without changing the current (existing) API or functionality. 
+[Patch] Increase number when fixing bugs or releasing
+
+Two prefix signals we have to consider
+"^4.9.7" Keep major version and update the minor and patch version to the latest
+"~4.9.7" Keep major and minor version and update patch version only to the latest
