@@ -71,5 +71,6 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/C++/study/algorithm/sort"
 }
