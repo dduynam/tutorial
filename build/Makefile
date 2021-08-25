@@ -74,6 +74,26 @@ edit_cache:
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
 
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	"C:\Program Files\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	"C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake D:/02.Practice/tutorial/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -176,6 +196,30 @@ src/bubblesort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/bubblesort.cpp.s
 .PHONY : src/bubblesort.cpp.s
 
+src/quicksort.obj: src/quicksort.cpp.obj
+.PHONY : src/quicksort.obj
+
+# target to build an object file
+src/quicksort.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/quicksort.cpp.obj
+.PHONY : src/quicksort.cpp.obj
+
+src/quicksort.i: src/quicksort.cpp.i
+.PHONY : src/quicksort.i
+
+# target to preprocess a source file
+src/quicksort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/quicksort.cpp.i
+.PHONY : src/quicksort.cpp.i
+
+src/quicksort.s: src/quicksort.cpp.s
+.PHONY : src/quicksort.s
+
+# target to generate assembly for a file
+src/quicksort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/quicksort.cpp.s
+.PHONY : src/quicksort.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -183,6 +227,8 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... package
+	@echo ... package_source
 	@echo ... rebuild_cache
 	@echo ... main
 	@echo ... main.obj
@@ -191,6 +237,9 @@ help:
 	@echo ... src/bubblesort.obj
 	@echo ... src/bubblesort.i
 	@echo ... src/bubblesort.s
+	@echo ... src/quicksort.obj
+	@echo ... src/quicksort.i
+	@echo ... src/quicksort.s
 .PHONY : help
 
 

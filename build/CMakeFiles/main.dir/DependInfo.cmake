@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/02.Practice/tutorial/C++/study/algorithm/sort/main.cpp" "CMakeFiles/main.dir/main.cpp.obj" "gcc" "CMakeFiles/main.dir/main.cpp.obj.d"
   "D:/02.Practice/tutorial/C++/study/algorithm/sort/src/bubblesort.cpp" "CMakeFiles/main.dir/src/bubblesort.cpp.obj" "gcc" "CMakeFiles/main.dir/src/bubblesort.cpp.obj.d"
+  "D:/02.Practice/tutorial/C++/study/algorithm/sort/src/quicksort.cpp" "CMakeFiles/main.dir/src/quicksort.cpp.obj" "gcc" "CMakeFiles/main.dir/src/quicksort.cpp.obj.d"
   )
 
 # Targets to which this target links.

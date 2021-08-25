@@ -1,3 +1,5 @@
 D:/02.Practice/tutorial/build/CMakeFiles/edit_cache.dir
 D:/02.Practice/tutorial/build/CMakeFiles/main.dir
+D:/02.Practice/tutorial/build/CMakeFiles/package.dir
+D:/02.Practice/tutorial/build/CMakeFiles/package_source.dir
 D:/02.Practice/tutorial/build/CMakeFiles/rebuild_cache.dir

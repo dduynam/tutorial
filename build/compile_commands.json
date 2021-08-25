@@ -1,12 +1,17 @@
 [
 {
   "directory": "D:/02.Practice/tutorial/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/main.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++11 -o CMakeFiles\\main.dir\\main.cpp.obj -c D:\\02.Practice\\tutorial\\C++\\study\\algorithm\\sort\\main.cpp",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\main.dir\\main.cpp.obj -c D:\\02.Practice\\tutorial\\C++\\study\\algorithm\\sort\\main.cpp",
   "file": "D:/02.Practice/tutorial/C++/study/algorithm/sort/main.cpp"
 },
 {
   "directory": "D:/02.Practice/tutorial/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/main.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++11 -o CMakeFiles\\main.dir\\src\\bubblesort.cpp.obj -c D:\\02.Practice\\tutorial\\C++\\study\\algorithm\\sort\\src\\bubblesort.cpp",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\main.dir\\src\\bubblesort.cpp.obj -c D:\\02.Practice\\tutorial\\C++\\study\\algorithm\\sort\\src\\bubblesort.cpp",
   "file": "D:/02.Practice/tutorial/C++/study/algorithm/sort/src/bubblesort.cpp"
+},
+{
+  "directory": "D:/02.Practice/tutorial/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\main.dir\\src\\quicksort.cpp.obj -c D:\\02.Practice\\tutorial\\C++\\study\\algorithm\\sort\\src\\quicksort.cpp",
+  "file": "D:/02.Practice/tutorial/C++/study/algorithm/sort/src/quicksort.cpp"
 }
 ]

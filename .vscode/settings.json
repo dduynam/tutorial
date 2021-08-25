@@ -72,5 +72,6 @@
         "typeinfo": "cpp",
         "valarray": "cpp"
     },
-    "cmake.sourceDirectory": "${workspaceFolder}/C++/study/algorithm/sort"
+    "cmake.sourceDirectory": "${workspaceFolder}/C++/study/algorithm/sort",
+    "C_Cpp.errorSquiggles": "Disabled"
 }
