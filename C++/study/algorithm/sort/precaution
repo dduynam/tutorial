@@ -1,3 +1,15 @@
 Usage of its
     - Bubble sort: use in case the number of array is significant.
-    - Quick sort: Divide and conquer algorithm
+    
+    - Quick sort: Divide and conquer algorithm.
+    
+    - Insertion sort: works similar to the way we sort playing cards in our hands. 
+        --> Description:    The array is split into a sorted (left) and an unsorted (right) part. Values from unsorted part is picked
+                            and placed at the correct position in the sorted part. 
+                            Time complexity: O(n^2)
+        --> Boundary Case: when the elements in the array are sorted in reverse order of the sequence after sorting. 
+        --> Algorithm Paradigm: Incremental Approach
+        --> Usage: sort playing card, while the left array is already sorted and just add a new element.
+
+    - Merge sort: Divde and conquer algorithm
+    

@@ -196,6 +196,54 @@ src/bubblesort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/bubblesort.cpp.s
 .PHONY : src/bubblesort.cpp.s
 
+src/insertionsort.obj: src/insertionsort.cpp.obj
+.PHONY : src/insertionsort.obj
+
+# target to build an object file
+src/insertionsort.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/insertionsort.cpp.obj
+.PHONY : src/insertionsort.cpp.obj
+
+src/insertionsort.i: src/insertionsort.cpp.i
+.PHONY : src/insertionsort.i
+
+# target to preprocess a source file
+src/insertionsort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/insertionsort.cpp.i
+.PHONY : src/insertionsort.cpp.i
+
+src/insertionsort.s: src/insertionsort.cpp.s
+.PHONY : src/insertionsort.s
+
+# target to generate assembly for a file
+src/insertionsort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/insertionsort.cpp.s
+.PHONY : src/insertionsort.cpp.s
+
+src/mergesort.obj: src/mergesort.cpp.obj
+.PHONY : src/mergesort.obj
+
+# target to build an object file
+src/mergesort.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/mergesort.cpp.obj
+.PHONY : src/mergesort.cpp.obj
+
+src/mergesort.i: src/mergesort.cpp.i
+.PHONY : src/mergesort.i
+
+# target to preprocess a source file
+src/mergesort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/mergesort.cpp.i
+.PHONY : src/mergesort.cpp.i
+
+src/mergesort.s: src/mergesort.cpp.s
+.PHONY : src/mergesort.s
+
+# target to generate assembly for a file
+src/mergesort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/mergesort.cpp.s
+.PHONY : src/mergesort.cpp.s
+
 src/quicksort.obj: src/quicksort.cpp.obj
 .PHONY : src/quicksort.obj
 
@@ -237,6 +285,12 @@ help:
 	@echo ... src/bubblesort.obj
 	@echo ... src/bubblesort.i
 	@echo ... src/bubblesort.s
+	@echo ... src/insertionsort.obj
+	@echo ... src/insertionsort.i
+	@echo ... src/insertionsort.s
+	@echo ... src/mergesort.obj
+	@echo ... src/mergesort.i
+	@echo ... src/mergesort.s
 	@echo ... src/quicksort.obj
 	@echo ... src/quicksort.i
 	@echo ... src/quicksort.s
