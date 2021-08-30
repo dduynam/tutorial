@@ -12,4 +12,24 @@ Usage of its
         --> Usage: sort playing card, while the left array is already sorted and just add a new element.
 
     - Merge sort: Divde and conquer algorithm
+
+    - Heap sort: based on Binary Head data structure (similar to Selection Sort)
+        + Binary Heap: items are stored in order and the value in parent is greater (smaller) than value of two children nodes.
+        + Max-Heap (root have to be biggest number, children have to be smaller than root). > < Min-Heap 
+        array =[0;1;2;3;4]
+                0
+               /  \
+              1    2
+             / \  
+            3  4  
+        
+        + Build the heap: Heapify procedure can be applied to a node only if its children nodes are heapified. 
+        So the heapification must be performed in the bottom-up order
+        (The Heapify procedure calls itself recursively to build heap in top down manner)
+
+        Mechanism: compare parent to its children, we will swap if there is a greater value on children nodes. 
+        + Starting from last parent node. (size/2 -1)
+        + Parent node: n  #<(n-1)/2> 
+        + Left child node: 2n+1
+        + Right child node: 2n+2
     

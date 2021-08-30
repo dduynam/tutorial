@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.cpp.obj.d"
   "CMakeFiles/main.dir/src/bubblesort.cpp.obj"
   "CMakeFiles/main.dir/src/bubblesort.cpp.obj.d"
+  "CMakeFiles/main.dir/src/heapsort.cpp.obj"
+  "CMakeFiles/main.dir/src/heapsort.cpp.obj.d"
   "CMakeFiles/main.dir/src/insertionsort.cpp.obj"
   "CMakeFiles/main.dir/src/insertionsort.cpp.obj.d"
   "CMakeFiles/main.dir/src/mergesort.cpp.obj"

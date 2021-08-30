@@ -196,6 +196,30 @@ src/bubblesort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/bubblesort.cpp.s
 .PHONY : src/bubblesort.cpp.s
 
+src/heapsort.obj: src/heapsort.cpp.obj
+.PHONY : src/heapsort.obj
+
+# target to build an object file
+src/heapsort.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/heapsort.cpp.obj
+.PHONY : src/heapsort.cpp.obj
+
+src/heapsort.i: src/heapsort.cpp.i
+.PHONY : src/heapsort.i
+
+# target to preprocess a source file
+src/heapsort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/heapsort.cpp.i
+.PHONY : src/heapsort.cpp.i
+
+src/heapsort.s: src/heapsort.cpp.s
+.PHONY : src/heapsort.s
+
+# target to generate assembly for a file
+src/heapsort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/heapsort.cpp.s
+.PHONY : src/heapsort.cpp.s
+
 src/insertionsort.obj: src/insertionsort.cpp.obj
 .PHONY : src/insertionsort.obj
 
@@ -285,6 +309,9 @@ help:
 	@echo ... src/bubblesort.obj
 	@echo ... src/bubblesort.i
 	@echo ... src/bubblesort.s
+	@echo ... src/heapsort.obj
+	@echo ... src/heapsort.i
+	@echo ... src/heapsort.s
 	@echo ... src/insertionsort.obj
 	@echo ... src/insertionsort.i
 	@echo ... src/insertionsort.s

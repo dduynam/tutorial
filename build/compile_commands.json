@@ -11,6 +11,11 @@
 },
 {
   "directory": "D:/02.Practice/tutorial/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\main.dir\\src\\heapsort.cpp.obj -c D:\\02.Practice\\tutorial\\C++\\study\\algorithm\\sort\\src\\heapsort.cpp",
+  "file": "D:/02.Practice/tutorial/C++/study/algorithm/sort/src/heapsort.cpp"
+},
+{
+  "directory": "D:/02.Practice/tutorial/build",
   "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\main.dir\\src\\insertionsort.cpp.obj -c D:\\02.Practice\\tutorial\\C++\\study\\algorithm\\sort\\src\\insertionsort.cpp",
   "file": "D:/02.Practice/tutorial/C++/study/algorithm/sort/src/insertionsort.cpp"
 },

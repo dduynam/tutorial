@@ -3,6 +3,7 @@
 #include "lib/quicksort.h"
 #include "lib/insertionsort.h"
 #include "lib/mergesort.h"
+#include "lib/heapsort.h"
 
 int main()
 {
@@ -27,9 +28,16 @@ int main()
     std::cout << "\n-------------\n";
     std::cout << "Merge Sort\n";
     std::vector<int> mergearray{4, 8, 7, 3, 5, 0, 3, 4};
-    mergeSort(mergearray, 0, mergearray.size()-1);
+    mergeSort(mergearray, 0, mergearray.size() - 1);
     std::cout << "After mergesorting." << std::endl;
     displayMergeSort(mergearray);
+
+    std::cout << "\n-------------\n";
+    std::cout << "Heap Sort\n";
+    std::vector<int> heaparray{4, 8, 7, 3, 5, 0, 3, 4};
+    heapSort(heaparray, heaparray.size());
+    std::cout << "After heapsorting." << std::endl;
+    displayHeapSort(heaparray);
 
     return 0;
 }
